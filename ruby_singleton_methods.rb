@@ -27,7 +27,14 @@ cat1 = Cat.new "Mr. Buttons"
 cat1.hi                      # "Hi, my name is Mr. Buttons!"
 cat1.class.hi                # "Hi, my name is Cat!"
 
-Cat.find 'serious'
+#Cat.find 'serious'
+
+p Animal.singleton_class
+p Animal.singleton_methods
+p Animal.singleton_class.instance_methods
+p Animal.singleton_class.instance_methods.grep /find/
+
+
 
 
 
