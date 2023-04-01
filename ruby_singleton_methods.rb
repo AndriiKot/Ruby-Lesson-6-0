@@ -29,10 +29,22 @@ cat1.class.hi                # "Hi, my name is Cat!"
 
 #Cat.find 'serious'
 
-p Animal.singleton_class
-p Animal.singleton_methods
-p Animal.singleton_class.instance_methods
-p Animal.singleton_class.instance_methods.grep /find/
+p Animal.singleton_class     # <Class:Animal>
+p Animal.singleton_methods   # [:hi,:find]
+p Animal.singleton_class.instance_methods  #[:hi,:find,:superclasses ...]
+p Animal.singleton_class.instance_methods.grep /find/  #[:find]
+
+p Cat.singleton_class.ancestors  
+=begin
+[
+#<Class:Cat>, #<Class:Animal>, #<Class:Object>, 
+#<Class:BasicObject>, Class, Module, Object,
+ PP::ObjectMixin, Kernel, BasicObject
+]
+=end
+
+
+
 
 
 
